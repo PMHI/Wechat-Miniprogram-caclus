@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/formula/formula",
+    "pages/level/level",
+    "pages/record/record"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/level/level",
+        "text": "难度"
+      },
+      {
+        "pagePath": "pages/formula/formula",
+        "text": "公式表"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "记录"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
