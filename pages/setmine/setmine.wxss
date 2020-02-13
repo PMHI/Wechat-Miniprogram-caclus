@@ -1,0 +1,28 @@
+/* pages/setmine/setmine.wxss */
+
+/*欢迎信息整体布局*/
+page{
+  height: 100%;
+}
+
+.userinfo{
+  text-align: center;
+}
+
+/*用户头像*/
+.userinfo-avatar {
+  margin-top:50rpx;
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+}
+/*用户名称*/
+.userinfo-nickname {
+  color: #000000fd;
+  font-size: 80rpx;
+}
+/*跳转按钮*/
+.co_button{
+  height: 90rpx;
+  margin: 20rpx;
+}

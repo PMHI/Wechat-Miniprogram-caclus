@@ -1,34 +1,51 @@
 {
   "pages": [
-    "pages/home/home",
-    "pages/formula/formula",
+    "pages/login/login",
+    "pages/index1/index1",
+    "pages/index/index",
+    "pages/setmine/setmine",
     "pages/level/level",
-    "pages/record/record"
+    "pages/record/record",
+    "pages/parent/parent",
+    "pages/instructions/instructions",
+    "pages/instructions_in/instructions_in"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTextStyle": "white"
+    "navigationBarBackgroundColor": "#6495ED",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "dark",
+    "backgroundColorTop": "#6495ED",
+    "backgroundColorBottom": "#6495ED",
+    "enablePullDownRefresh": false
   },
   "tabBar": {
-    "selectedColor": "#ff5777",
+    "selectedColor": "#0000FF",
     "list": [
       {
-        "pagePath": "pages/home/home",
-        "text": "首页"
+        "pagePath": "pages/index/index",
+        "text": "做题",
+        "iconPath": "picture/add.jpg",
+        "selectedIconPath": "picture/selected.png"
       },
       {
         "pagePath": "pages/level/level",
-        "text": "难度"
-      },
-      {
-        "pagePath": "pages/formula/formula",
-        "text": "公式表"
+        "text": "难度",
+        "iconPath": "picture/sub.jpg",
+        "selectedIconPath": "picture/selected.png"
       },
       {
         "pagePath": "pages/record/record",
-        "text": "记录"
+        "text": "记录",
+        "iconPath": "picture/mul.jpg",
+        "selectedIconPath": "picture/selected.png"
+      },
+      {
+        "pagePath": "pages/setmine/setmine",
+        "text": "设置",
+        "iconPath": "picture/div.jpg",
+        "selectedIconPath": "picture/selected.png"
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap35.json"
 }

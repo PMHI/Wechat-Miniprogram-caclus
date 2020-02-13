@@ -1,1 +1,42 @@
 /* pages/record/record.wxss */
+page{
+  height: 100%;
+}
+
+.weui-cells__title{
+  color: #111011dc;/*文字颜色*/
+  text-align: center;/*文字居中*/
+  font-size: 50rpx;
+  font-weight:bolder;
+  font-family:inherit;
+}
+
+.page-section{
+  margin-top: 5rpx;
+  width: 700rpx;
+  height: 750rpx;
+  opacity:0.9;
+  background:hsla(204, 24%, 96%, 0.527);
+  box-shadow: 6rpx,6rpx,6rpx;
+  border-color: black;
+  border-inline-end-color: black
+}
+
+/*已添加题目的样式*/
+.for-inputs{
+  background: rgba(245, 243, 243, 0.596);
+  margin-bottom: 10rpx;
+  height: 50rpx;
+  font-size:38rpx;
+}
+
+/* 分界线样式 */
+.divd_line{
+  margin-right: 50rpx;
+  margin-left: 50rpx;
+  width: 600rpx;
+  text-align: center;
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+}

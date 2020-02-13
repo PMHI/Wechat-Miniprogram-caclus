@@ -1,0 +1,42 @@
+<!--pages/index/index.wxml-->
+
+	<!--图片文件-->
+<image class='background' src="../../picture/starboy3.jpg" mode="aspectFill"></image>
+  <!-- 音乐文件 -->
+  <audio  src="{{music_src}}" id="myAudio" ></audio>
+	<!--页面其它部分-->
+
+  <view class="bady-all">
+
+    <view class="weui-cells__title">答题结果:</view>
+    <view class="info-section">
+      <view class="info_err">
+        <view style="margin:10rpx;">正确率:{{right_rate}}%</view>
+        <view style="margin:10rpx;">错题个数:{{err_num}}</view>
+        <view style="margin:10rpx;">正确个数:{{right_num}}</view>
+        <view style="margin:10rpx;">错误题号:</view>
+        <view class="err_put" backgroud="white">
+          <view wx:for="{{err_inputs}}" style="margin:5rpx;">{{item}}\t</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">题目列表（小数向下取整）:</view>
+    <form bindreset="foo">
+      <block wx:for="{{exes}}" style="margin-bottom:20rpx;">
+        <!-- 题目 -->
+        <view class="for-exes">题{{item.name+1}}:{{item.value}}</view>
+        <view class="input-section">
+          <!-- 输入框 -->
+          <input bindinput="bindKeyInput" type="text" id="{{item.name}}" vaule="{{input_value}}"
+          placeholder="在此输入第{{item.name+1}}题的答案）" class="weui-input"
+          style="background:white;color:black;height:60rpx;margin:5rpx;opacity:0.9;" />
+        </view>
+      </block>
+      <button type='primary' bindtap='hand_ans' form-type="reset"
+      style='height:90rpx;font-size:32rpx;margin-top:20rpx;'disable="{{disable}}">提交答案</button>
+    </form>
+
+</view>
+
+

@@ -1,0 +1,46 @@
+<!--pages/formula/formula.wxml-->
+
+  <!--图片文件-->
+<image class='background' src="../../picture/starboy8.jpg" mode="aspectFill"></image>
+
+	  <!--页面其它部分-->
+<view class="container">
+
+
+    <!--显示用户头像-->
+    <view  class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view>
+        <text class="userinfo-nickname">Hello, {{userInfo.nickName}}</text>
+      </view>
+    </view>
+    <!--显示用户昵称-->
+    
+
+  <!--界面跳转-->
+    <view class="usermotto">
+      <button type="primary" hover-class="button-hover" disabled="{{disabled}}" bindtap="toCalc2" 
+      class="wel_button"> 我要出题\n</button>
+      <button type="primary" hover-class="button-hover" disabled="{{disabled}}" bindtap="toCalc1"
+      class="wel_button"> 我要做题\n</button>
+    </view>
+    
+  <!--状态标记跳转-->
+    <view style="margin-top:60rpx">
+      <navigator url="../index/index" class="icon_tap" hover-class="navigator-hover" bindtap="bindViewTap">
+        <icon type="{{iconType}}" class="icon" size="15"/>查看说明\ninstruction
+      </navigator>
+    </view>
+
+    
+    <view class="musicmotto" padding-top>
+      <view>
+        <image animation="{{animation}}" style="width: 100px; height: 100px;border-radius: 50%;" 
+        src="{{music_picsrc}}" ></image>
+      </view>
+      <view class="ctr-button">
+          <button  class="musicbutton" bindtap="audio2P">play/stop</button>
+      </view>
+      <audio  src="{{music_src}}" id="myAudio" ></audio>   
+    </view>
+</view> 

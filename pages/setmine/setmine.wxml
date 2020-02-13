@@ -1,0 +1,25 @@
+<!--pages/setmine/setmine.wxml-->
+
+<!--图片文件-->
+<image class='background' src="../../picture/starboy8.jpg" mode="aspectFill"></image>
+	
+<!--页面其它部分-->
+
+  <!--显示用户头像-->
+    <view  class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+
+  <!--界面跳转-->
+  <view style="margin-top:500rpx">
+  <!--音乐控制跳转-->
+    <button type="primary" plain="{{plain}}" hover-class="button-hover" 
+      disabled="{{disabled}}" bindtap="audio2P" class="co_button"> 当前声音:{{music_ableinfo}} </button>
+    <button type="primary" plain="{{plain}}" hover-class="button-hover" 
+      disabled="{{disabled}}" bindtap="intro" class="co_button"> {{turn_intro}} </button>
+    <button style='background:red;color:white' plain="{{plain}}" hover-class="button-hover" 
+    disabled="{{disabled}}" bindtap="sign_out" class="co_button"> {{turn_out}} </button>
+  </view>

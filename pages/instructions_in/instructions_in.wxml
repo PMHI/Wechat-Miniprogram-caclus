@@ -1,0 +1,19 @@
+<!--pages/instructions/instructions.wxml-->
+
+	<!--图片文件-->
+  <image class='background' src="../../picture/starboy8.jpg" mode="aspectFill"></image>
+	<!--页面其它部分-->
+<view class="body_word">
+  <view class="word_part">
+    <view style="margin:50rpx;margin-top:0rpx" class = "info_word">1. 小程序会获取用户头像和姓名等信息用于验证身份\n</view>
+    <view class = "info_word">2. 小程序旨在帮助需要的群体更好地训练口算心算能力\n</view>
+    <view class = "info_word">3. 用户选择“我要出题”登录，可以自己设计题目，返回主界面后点击“我要做题”即可做刚刚出的题目；用户也可以直接选“我要做题”，里面提供自动出题功能\n</view>
+    <view class = "info_word">4. 目前出题功能只限于同一设备上实现）\n</view>
+    <view class = "info_word">5. 小程序未经允许不可用于商业用途\n</view>
+    <view class = "info_word">6. 更多功能尚待完善，任何有关小程序的问题或建议，欢迎邮件至：1125440025@qq.com\n</view>
+  </view>
+  <!--状态标记跳转-->
+  <view style="margin:150rpx">
+    <button type="primary" hover-class="button-hover" bindtap="back_Home"> 返回做题 </button>
+  </view>
+</view>

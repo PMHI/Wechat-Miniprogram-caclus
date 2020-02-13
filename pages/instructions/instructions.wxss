@@ -1,0 +1,18 @@
+/* pages/instructions/instructions.wxss */
+page{
+  height: 100%;
+  opacity:0.9;
+}
+
+
+.info_word{
+  margin: 50rpx;
+  font-weight: 550;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 35rpx;
+}
+
+.body_word{
+  height: 100%;
+  background:hsla(210, 33%, 99%, 0.644);
+}

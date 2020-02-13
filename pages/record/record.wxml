@@ -1,2 +1,31 @@
 <!--pages/record/record.wxml-->
-<text>pages/record/record.wxml</text>
+
+	<!--图片文件-->
+<image class='background' src="../../picture/starboy6.jpg" mode="aspectFill"></image>
+	
+	<!--页面其它部分-->
+<view class="container">
+<!--错题目显示区-->
+  <view class="page-section">
+    <view class="weui-cells__title">当前错题列表</view>
+    <!-- 打印分界线 -->
+    <view class="divd_line">
+      <block wx:for="{{25}}"><text>-</text></block>
+    </view>
+
+    <scroll-view scroll-y style="height: 650rpx;" enable-back-to-top scroll-anchoring
+      bindscroll="scroll">
+      <text>共出现{{err_num}}道错题</text>
+      <block wx:for="{{err_exe}}">
+        <view class="for-inputs">{{item}}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <view style="height: 50rpx;margin-top:20rpx">
+    <button type='primary' bindtap='removeItem' 
+    style='height:85rpx;font-size:32rpx;background:red;width:720rpx'>删除错题</button>
+    <button type='primary' bindtap='clearItem' 
+    style='height:85rpx;font-size:32rpx;background:red;width:720rpx;margin-top:20rpx;'>清空错题</button>
+  </view>
+</view>
+

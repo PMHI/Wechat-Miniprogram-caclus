@@ -1,2 +1,71 @@
-<!--pages/level/level.wxml-->
-<text>pages/level/level.wxml</text>
+<!--pages/parent/parent.wxml-->
+
+<!--图片文件-->
+<image class='background' src="cloud://exesmaker-1xvvd.6578-exesmaker-1xvvd-1300467762/parent.gif" mode="aspectFill"></image>
+
+<text>\n</text>
+<view class="weltitle">{{wel_come}}</view>
+
+  <!--页面其它部分-->
+<view class="page-body-all">
+  <!--单项选择-->
+  <view class="radio_style">
+    <!--选择模式-->
+    <radio-group bindchange="radioChange_mod" class="page-section">
+      <text class="weui-cells__title">模式：</text>
+      <label wx:for="{{mods}}">
+        <radio value="{{item.value}}" checked="{{item.checked}}" disabled="{{true}}" style="margin:25rpx;font-weight: 500;">{{item.name}}
+        </radio>
+      </label>
+    </radio-group>
+    <!--选择运算数字个数-->
+    <radio-group bindchange="radioChange_num" class="page-section">
+      <text class="weui-cells__title">运算个数：</text>
+      <label wx:for="{{items}}">
+        <radio value="{{item.value}}" checked="{{item.checked}}" style="margin-right:25rpx">{{item.name}}</radio>
+      </label>
+    </radio-group>
+    
+  </view>
+
+  <view class="slider_style">
+    <!--输入滑块控制位数区域-->
+    <!-- 打印分界线 -->
+    <view class="divd_line">
+      <block wx:for="{{25}}"><text>-</text></block>
+    </view>
+    <view style="height: 140rpx;" class="page-section">
+      <view style="margin:5rpx;"class="weui-cells__title">题数：{{exercise_num}}\n</view>
+      <slider bindchange="slider1change" max="{{exercise_max}}" min="{{exercise_min}}" step="1" 
+      activeColor="green"	 block-size="20"/>
+    </view>
+
+    <!--输入滑块控制位数区域-->
+    <view style="height: 140rpx;" class="page-section">
+      <view style="margin:5rpx;"class="weui-cells__title">操作数位数：{{opr_dig}}\n</view>
+      <view class="body-view">
+        <slider bindchange="slider2change" max="{{dig_max}}" min="{{dig_min}}" step="1" 
+        activeColor="green"	 block-size="20"/>
+      </view>
+    </view>
+    <!-- 打印分界线 -->
+    <view class="divd_line">
+      <block wx:for="{{25}}"><text>-</text></block>
+    </view>
+  </view>
+
+  <!--多项选择-->
+  <view class="checkbox_style">
+    <checkbox-group bindchange="checkboxChange_num" class="page-section">
+      <text class="weui-cells__title">参与的操作数：</text>
+      <label wx:for="{{opr_spes}}">
+        <checkbox value="{{item.value}}" checked="{{item.checked}}" style="margin-right:25rpx">{{item.name}}</checkbox>
+      </label>
+    </checkbox-group>
+  </view>
+  <!-- 选择是否开启自动出题 -->
+    <view class="page-section" style="height:0rpx;">
+      <text class="weui-cells__title">自动出题</text>
+      <switch bindchange="switch_Changed"></switch>
+    </view>
+</view>

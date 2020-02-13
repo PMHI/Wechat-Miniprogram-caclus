@@ -1,30 +1,18 @@
-// pages/record/record.js
-var app = getApp()
+// pages/instructions/instructions.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      err_exe:[],
-      err_num:0,
+
   },
-  clearItem: function () {
-    if (this.data.err_num != 0) {
-      this.setData({
-        err_exe: "",
-        err_num: 0
-      });
-    }
-  },
-  removeItem: function () {
-    if (this.data.err_num != 0) {
-      this.data.err_exe.pop();
-      this.setData({
-        err_exe: this.data.err_exe,
-        err_num: this.data.err_num - 1
-      });
-    }
+
+
+  back_Home: function(){  //回到登录界面
+    wx.navigateBack({
+      url: '../index1/index1'
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -44,18 +32,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      err_exe:app.globalData.err_Exe,
-      err_num:app.globalData.err_Num
-    })
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    app.globalData.err_Num = this.data.err_num  //更新错题个数
-    app.globalData.err_Exe = this.data.err_exe  //更新错题
+
   },
 
   /**

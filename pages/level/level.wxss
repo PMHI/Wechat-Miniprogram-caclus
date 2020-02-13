@@ -1,1 +1,66 @@
-/* pages/level/level.wxss */
+page{
+  height: 100%;
+}
+/* 标题样式 */
+.weltitle{
+  color: #111011dc;/*文字颜色*/
+  text-align: center;/*文字居中*/
+  font-size: 50rpx;
+  font-weight:900;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* 分界线样式 */
+.divd_line{
+  margin-right: 50rpx;
+  margin-left: 50rpx;
+  width: 600rpx;
+  text-align: center;
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+}
+
+/* 小标题样式 */
+.weui-cells__title{
+  font-size:35rpx;
+  font-weight: 700;
+  margin-right:20rpx;
+}
+
+/* 所有组件布局设置 */
+.page-body-all{
+  background: rgba(184, 184, 189, 0.534);
+  margin:10px;
+  height: 90%;
+  /*实现多个按钮水平布局*/
+  display: flex;
+  flex-direction:column;
+  justify-content:space-around;
+  box-shadow: 6rpx,6rpx,6rpx;
+}
+/*同类型组件设置*/
+.page-section{
+  height: 100rpx;
+  margin: 15rpx;
+  margin-bottom: 50rpx;
+  text-align: center;
+}
+
+/* 滑块总模块布局设置 */
+.slider_style{
+  height: 200rpx;
+  margin-top: 150rpx;
+}
+
+/* 单选总模块布局设置 */
+.radio_style{
+  margin-top:50rpx;
+  height: 100rpx;
+}
+
+/* 多选总模块布局设置 */
+.checkbox_style{
+  margin-top:300rpx;
+  height: 80rpx;
+}

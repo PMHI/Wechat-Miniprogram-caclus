@@ -1,0 +1,91 @@
+/* pages/formula/formula.wxss */
+page{
+  height: 100%;
+}
+
+.userinfo{
+  text-align: center;
+}
+
+/*用户头像*/
+.userinfo-avatar {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+}
+/*用户名称*/
+.userinfo-nickname {
+  color: #000000fd;
+  font-style: bold;
+  font-size: 70rpx;
+}
+
+
+/*登录按钮整体布局*/
+.usermotto {
+  margin-top: 80rpx;
+  /*实现多个按钮水平布局*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+}
+
+/*登录按钮*/
+.wel_button{
+  font-size: 35rpx;
+  margin: 20rpx;
+}
+
+/** 修改欢迎button默认的点击态样式类**/
+.button-hover {
+  background-color: rgba(17, 17, 221, 0.486);
+}
+
+/** 修改默认的navigator点击态 **/
+.navigator-hover {
+    color:blue;
+}
+
+/*图标控制*/
+.icon_tap{
+  color: rgba(0, 255, 0, 0.884);
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.icon{
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+/*提示语控制*/
+.tip_word{
+  font-size: 25rpx;
+  text-align: center;
+}
+
+
+/*音乐信息整体布局*/
+.musicmotto{
+  margin-top: 300rpx;
+  text-align: center;
+}
+
+/*音乐按钮整体布局*/
+.ctr-button{
+  /*实现多个按钮水平布局*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+}
+
+/*音乐按钮*/
+.musicbutton{
+  margin: 10rpx; 
+  width: 140rpx;
+  height: 50rpx;
+  font-weight: 120;
+  font-size: 20rpx;
+}

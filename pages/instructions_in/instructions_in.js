@@ -1,4 +1,4 @@
-// pages/formula/formula.js
+// pages/instructions/instructions.js
 Page({
 
   /**
@@ -7,7 +7,20 @@ Page({
   data: {
 
   },
+  //分享界面
+  onShareAppMessage: function () {
+    return {
+      title: '一起来做题！',
+      imageUrl: '/picture/pad4.jpg'
+    }
+  },
 
+
+  back_Home: function(){  //回到setmine
+    wx.navigateBack({
+      url: '../setmine/setmine'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

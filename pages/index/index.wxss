@@ -1,0 +1,82 @@
+/* pages/index/index.wxss */
+page{
+  height:100%;
+}
+
+/* 图片背景 */
+.background{
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+
+/* ------------------- */
+
+/* 整体布局 */
+.bady-all{
+
+}
+
+/* 普通文字格式 */
+.weui-cells__title{
+  color:white; 
+  margin-top: 50rpx;
+  height: 60rpx;
+  font-size:38rpx;
+}
+/* 正确率 个数统计 */
+.info_err{
+  color:white; 
+  margin-bottom: 5rpx;
+  margin-right: 50rpx;
+}
+
+.err_put{
+  /*实现多个按钮水平布局*/
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+
+/* 做题片区布局 */
+.exe-section{
+  background:hsla(210, 87%, 76%, 0.582);
+  opacity:0.9;
+  height: 700rpx;
+}
+
+/*已添加题目的样式*/
+.for-exes{
+  background:hsla(210, 87%, 76%, 0.582);
+  margin-top:20rpx;
+  opacity:0.9;
+  height: 50rpx;
+  font-size:38rpx;
+}
+
+/* 输入框区域 */
+.intput-section{
+  margin:20rpx;
+}
+.ans-input{
+  
+}
+
+/* 结果片区布局 */
+.info-section{
+  background: hsla(210, 87%, 76%, 0.582);
+  opacity:0.9;
+  height: 300rpx;
+}
+
+/*占位符设置及输入框设置*/
+.weui-input{
+  opacity:0.8;
+  color: #f6fdf7;
+  font-style: italic;
+  font-size: 35rpx;
+  border-color: black;
+  height: 60rpx
+}

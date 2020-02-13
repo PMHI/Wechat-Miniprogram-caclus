@@ -1,0 +1,4 @@
+
+<view class="userinfo" style="margin-top:90%">
+  <button open-type='getUserInfo' bindgetuserinfo="getUserInfo" style="height:200rpx,width:400rpx">点击授权登录小程序</button>
+</view>

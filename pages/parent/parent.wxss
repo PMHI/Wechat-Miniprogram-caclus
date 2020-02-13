@@ -1,0 +1,73 @@
+page{
+  height: 100%;
+}
+
+.weltitle{
+  color: #111011dc;/*文字颜色*/
+  text-align: center;/*文字居中*/
+  font-size: 50rpx;
+  font-weight:bolder;
+  font-family:inherit;
+}
+
+/*输入整体布局设置*/
+.page-body{
+  margin-top: 20rpx;
+  box-shadow: 6rpx 6rpx 6rpx
+}
+
+/*输入子块布局设置*/
+.page-section{
+  margin-top: 5rpx;
+  opacity:0.9;
+  background:hsla(210, 94%, 80%, 0.582);
+  box-shadow: 6rpx,6rpx,6rpx;
+  border-color: black;
+  border-inline-end-color: black
+}
+
+/*输入子块标题设置*/
+.weui-cells__title{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 36rpx;
+  font-weight:bolder;
+}
+
+/*占位符设置及输入框设置*/
+.weui-input{
+  opacity:0.8;
+  background: #ffffffe3;
+  font-style: italic;
+  font-size: 35rpx;
+  border-color: black;
+  height: 65rpx
+}
+
+/*添加删除按钮布局设置*/
+.co-button{
+  margin-top:18rpx;
+  margin-bottom:20rpx;
+  /*实现多个按钮水平布局*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+}
+
+/* 运算符按钮 */
+.mini-button{
+  height:80rpx;
+  width: 120rpx;
+  margin:5rpx;
+  box-shadow: 5rpx 5rpx 5rpx;
+  background: black;
+  line-height: 100rpx
+}
+
+/*已添加题目的样式*/
+.for-inputs{
+  background: rgba(245, 243, 243, 0.596);
+  margin-bottom: 10rpx;
+  height: 60rpx;
+  font-size:38rpx;
+}

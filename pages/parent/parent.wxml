@@ -1,0 +1,62 @@
+<!--pages/parent/parent.wxml-->
+
+	<!--图片文件-->
+  <image class='background' src="cloud://exesmaker-1xvvd.6578-exesmaker-1xvvd-1300467762/parent.gif" mode="aspectFill"></image>
+	
+  <view class="weltitle">{{wel_come}}</view>
+	
+<!--页面其它部分-->
+<view class="page-body">
+
+  <!--输入式子显示区域-->
+  <view style="height: 150rpx;" class="page-section">
+    <text class="weui-cells__title">题目：{{allValue}}</text>
+    <view  style="margin-top:10rpx" class="weui-cells__title">操作符号：{{operation}}\n</view>
+  </view>
+
+  <!--   输入区   -->
+  <view style="height:420rpx;margin-top:20rpx;margin-bottom:20rpx;" class="page-section">
+
+    <!--选择数字个数-->
+    <radio-group bindchange="radioChange">
+      <text class="weui-cells__title">数字个数：</text>
+      <label wx:for="{{items}}">
+        <radio value="{{item.value}}" checked="{{item.checked}}" style="margin-right:25rpx">{{item.name}}</radio>
+      </label>
+    </radio-group>
+
+    <form bindreset="foo">
+      <!--输入数字-->
+      <view class="weui-cells__title" style="margin-top:18rpx">输入数字：</view>
+      <view class="page-section">
+        <input class="weui-input" auto-focus maxlength="{{num_dig}}"  bindinput="bindKeyInput" disabled="{{input_flag}}"
+        type="digit" hold-keyboard="true" placeholder="输入数字（最多位数：{{num_dig}}）" confirm-type="done"/>
+      </view>
+      <!--输入运算符-->
+      <view class="co-button" >
+        <button type='primary' bindtap='add' form-type="reset" class="mini-button"
+        style='margin-left:50rpx;'>+</button>
+        <button type='primary' bindtap='sub' form-type="reset" class="mini-button">-</button>
+        <button type='primary' bindtap='mul' form-type="reset" class="mini-button">*</button>
+        <button type='primary' bindtap='div' form-type="reset" class="mini-button"
+        style='margin-right:50rpx'>/</button>
+      </view>
+      <button type='primary' bindtap='hand' form-type="reset" style='height:80rpx;width:700rpx;font-size:30rpx;box-shadow: 3rpx 3rpx 3rpx'>确定</button>
+    </form>
+  </view>
+
+  <!--已提交题目显示区-->
+  <view class="weui-cells__title">当前题目列表（添加后自动计算结果）:</view>
+  <view class="page-section">
+    <scroll-view scroll-x scroll-y style="height: 500rpx;width:100%;" enable-back-to-top scroll-anchoring
+      bindscroll="scroll">
+      <block wx:for="{{inputs}}">
+        <view class="for-inputs">{{item.value}}={{item.answer}}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <button type='primary' bindtap='removeItem' 
+  style='height:80rpx;font-size:30rpx;margin-top:15rpx;background:red;width:720rpx'>删除题目</button>
+  <button type='primary' bindtap='backHome' 
+  style='height:80rpx;font-size:30rpx;margin-top:15rpx;width:720rpx'>返回首页</button>
+</view>
